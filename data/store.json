@@ -1,0 +1,160 @@
+{
+  "users": [
+    {
+      "user_id": 1,
+      "email": "superadmin@coolco.lk",
+      "name": "Super Admin",
+      "phone": "",
+      "password": "$2b$10$TUm7ltJWkz2xXOVGM4nT8OLDDQwSyhfdKjQhdcDaAjELOFfnfIcDq",
+      "role": "super_admin",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:33.925Z"
+    },
+    {
+      "user_id": 2,
+      "email": "admin@coolco.lk",
+      "name": "Admin User",
+      "phone": "",
+      "password": "$2b$10$sfb1PE819Mllxn5TKlQ6H.x2TxJZyn6iUUP/9CSbCG3ahMIUqFdyS",
+      "role": "manager",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:33.994Z"
+    },
+    {
+      "user_id": 3,
+      "email": "kamal@coolco.lk",
+      "name": "Kamal Perera",
+      "phone": "",
+      "password": "$2b$10$Bjp4yEqTztlw6L7n/DRkb.dDfkXLzqDoIY4fIg5BOZq6H/KyR2mA2",
+      "role": "warehouse",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:34.061Z"
+    },
+    {
+      "user_id": 4,
+      "email": "nimal@coolco.lk",
+      "name": "Nimal Silva",
+      "phone": "",
+      "password": "$2b$10$qlJI5.O.u65W2QyyCxrX7OdWSXa8c4KKNAliYkoVdEykqYrQJNDy2",
+      "role": "sales",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:34.131Z"
+    },
+    {
+      "user_id": 5,
+      "email": "sunil@coolco.lk",
+      "name": "Sunil Fernando",
+      "phone": "",
+      "password": "$2b$10$qEaFVaSNPnH0GDCj8WUbH.z2n6ItqRvcs4RF679NUvuuRtLRhacxu",
+      "role": "cashier",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:34.205Z"
+    },
+    {
+      "user_id": 6,
+      "email": "roshan@coolco.lk",
+      "name": "Roshan Bandara",
+      "phone": "",
+      "password": "$2b$10$YiJhnVtmTsiRqWpzR3Ns3.r7DM3T19aKlKFzC6XdCvfTawZ5xUbUm",
+      "role": "technician",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:34.272Z"
+    },
+    {
+      "user_id": 7,
+      "email": "saman@dealer.lk",
+      "name": "Saman Dealers",
+      "phone": "",
+      "password": "$2b$10$/huUKoaEy0dqi.pfJLxEOOeS72U8w1mRr2WTjTAwr5Islez4eslPC",
+      "role": "dealer",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:34.340Z"
+    },
+    {
+      "user_id": 8,
+      "email": "shop@coolco.lk",
+      "name": "Colombo AC Shop",
+      "phone": "",
+      "password": "$2b$10$axGwoc5/MBFhaBacKIjMNeuV5o0cZVZ.gAaq69SFPixUmj1TQ3oZa",
+      "role": "shop",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:34.411Z"
+    },
+    {
+      "user_id": 9,
+      "email": "amal@gmail.com",
+      "name": "Amal Perera",
+      "phone": "",
+      "password": "$2b$10$IOfBpEulBcegPRR21820wOvd9db3f.gxNXZF5/PakBsOfugvKb8MC",
+      "role": "customer",
+      "is_active": true,
+      "created_at": "2026-04-24T09:19:34.493Z"
+    },
+    {
+      "user_id": 10,
+      "email": "nilupa@gmail.com",
+      "name": "Nilupa",
+      "phone": "0987654321",
+      "password": "$2b$10$rfGvTZVnRnjr7W54DYBH8OEfMKn6btXNRV.g40PEJ1vfVixnbEoPO",
+      "role": "customer",
+      "is_active": true,
+      "created_at": "2026-04-24T09:24:32.343Z"
+    }
+  ],
+  "pins": [
+    {
+      "user_id": 1,
+      "pin_hash": "$2b$10$mNxnShpycQlDrxHhsZWbeuYfQmjaLgEUj8P1I7xmndoAKBdK8ata.",
+      "created_at": "2026-04-24T09:19:34.561Z"
+    },
+    {
+      "user_id": 2,
+      "pin_hash": "$2b$10$Ig1jLKVQAMUA5J2w9FuQlOBCyPhYnwFSvWs6gTQm8Qs4WTKpVaOea",
+      "created_at": "2026-04-24T09:19:34.629Z"
+    },
+    {
+      "user_id": 3,
+      "pin_hash": "$2b$10$Q6o..WlSRCfgs3WbikmtluPb2GzbQ95BhmfqTFf0k0TGG.HEdLcNy",
+      "created_at": "2026-04-24T09:19:34.698Z"
+    },
+    {
+      "user_id": 4,
+      "pin_hash": "$2b$10$MeodMOph0VNID1BNzfkTWOE3IsHgxFIS5xiLr6zoe0VcO2pyvuuX2",
+      "created_at": "2026-04-24T09:19:34.766Z"
+    },
+    {
+      "user_id": 5,
+      "pin_hash": "$2b$10$xHuRb0oDg6V8yS8YUi1CS.OWQ83NE7cbtzK90ou9fZjYPcpjYR7ki",
+      "created_at": "2026-04-24T09:19:34.835Z"
+    },
+    {
+      "user_id": 6,
+      "pin_hash": "$2b$10$uteVp8TcHc6V.osLg7PWQehkkY8iaPdeP.Fs.JEbMJW68NzQndQ2m",
+      "created_at": "2026-04-24T09:19:34.906Z"
+    },
+    {
+      "user_id": 7,
+      "pin_hash": "$2b$10$NveiLbEO1Z51XItbNBh4buHSxJN/ehSCs8k2XZQk4i8z2FvnvQV4S",
+      "created_at": "2026-04-24T09:19:34.975Z"
+    },
+    {
+      "user_id": 8,
+      "pin_hash": "$2b$10$pzIlQK3A/ow.hJ0X8Bm.s.SMaSCCuG3zUk9xXpQgRIrPhUDGg9Zji",
+      "created_at": "2026-04-24T09:19:35.042Z"
+    },
+    {
+      "user_id": 9,
+      "pin_hash": "$2b$10$xy1wPg/URW4JXdMcE1zjG.4KPm7F18Nj8EKIVcWixoM6rj1RinYJy",
+      "created_at": "2026-04-24T09:19:35.111Z"
+    }
+  ],
+  "sessions": [],
+  "emailOtps": [],
+  "resetOtps": [
+    {
+      "email": "nilupa@gmail.com",
+      "otp": "189980",
+      "expires_at": "2026-04-24T09:35:10.068Z"
+    }
+  ]
+}
