@@ -2,8 +2,9 @@ const { verify } = require('../utils/jwt.util');
 const store = require('../config/store');
 
 function authenticate(req, res, next) {
-  const token = req.headers['authorization'];
-  if (!token) return res.json({ is_success: false, message: 'No token provided' });
+  const header = req.headers['authorization'];
+  if (!header) return res.json({ is_success: false, message: 'No token provided' });
+  const token = header.startsWith('Bearer ') ? header.slice(7) : header;
   try {
     const decoded = verify(token);
     const user = store.users.find((u) => u.user_id === decoded.user_id);

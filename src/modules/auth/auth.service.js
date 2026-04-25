@@ -1,9 +1,7 @@
-const bcrypt  = require('bcryptjs');
 const crypto  = require('crypto');
 const store   = require('../../config/store');
-const { sign }         = require('../../utils/jwt.util');
-const { bcrypt: cfg }  = require('../../config/app.config');
-const { save }         = require('../../utils/persist');
+const { sign } = require('../../utils/jwt.util');
+const { save } = require('../../utils/persist');
 
 const sha256 = (v) => crypto.createHash('sha256').update(v).digest('hex');
 
@@ -12,7 +10,7 @@ const findByEmail = (email) =>
 
 // ── Register ──────────────────────────────────────────────────────────────────
 
-async function register(name, email, phone, password) {
+function register(name, email, phone, password) {
   if (findByEmail(email)) {
     return { ok: false, message: 'An account with this email already exists' };
   }
@@ -21,14 +19,12 @@ async function register(name, email, phone, password) {
     ? Math.max(...store.users.map((u) => u.user_id)) + 1
     : 1;
 
-  const hashedPassword = await bcrypt.hash(sha256(password), cfg.rounds);
-
   store.users.push({
     user_id,
     email,
     name,
     phone: phone || '',
-    password: hashedPassword,
+    password: password,
     role: 'customer',   // self-registered users are customers
     is_active: false,   // inactive until OTP verified
     created_at: new Date().toISOString(),
@@ -101,14 +97,13 @@ function resendEmailOtp(email) {
 
 // ── Login ─────────────────────────────────────────────────────────────────────
 
-async function login(email, password) {
+function login(email, password) {
   const user = findByEmail(email);
   if (!user) return { ok: false, message: 'Invalid email or password' };
   if (!user.is_active)
     return { ok: false, message: 'Account not verified. Please check your OTP.' };
 
-  const match = await bcrypt.compare(sha256(password), user.password);
-  if (!match) return { ok: false, message: 'Invalid email or password' };
+  if (password !== user.password) return { ok: false, message: 'Invalid email or password' };
 
   const hasPinSet = store.pins.some((p) => p.user_id === user.user_id);
   const token = sign({ user_id: user.user_id, role: user.role, email: user.email });
@@ -125,25 +120,23 @@ async function login(email, password) {
 
 // ── Verify PIN ────────────────────────────────────────────────────────────────
 
-async function verifyPin(userId, pin) {
+function verifyPin(userId, pin) {
   const record = store.pins.find((p) => p.user_id === userId);
   if (!record) return { ok: false, message: 'PIN not set' };
-  const match = await bcrypt.compare(pin, record.pin_hash);
-  if (!match) return { ok: false, message: 'Incorrect PIN' };
+  if (pin !== record.pin_hash) return { ok: false, message: 'Incorrect PIN' };
   return { ok: true, message: 'PIN verified' };
 }
 
 // ── Set PIN ───────────────────────────────────────────────────────────────────
 
-async function setPin(userId, pin) {
+function setPin(userId, pin) {
   if (!/^\d{4,6}$/.test(pin)) return { ok: false, message: 'PIN must be 4–6 digits' };
-  const hash = await bcrypt.hash(pin, cfg.rounds);
   const existing = store.pins.findIndex((p) => p.user_id === userId);
   if (existing >= 0) {
-    store.pins[existing].pin_hash = hash;
+    store.pins[existing].pin_hash = pin;
     store.pins[existing].updated_at = new Date().toISOString();
   } else {
-    store.pins.push({ user_id: userId, pin_hash: hash, created_at: new Date().toISOString() });
+    store.pins.push({ user_id: userId, pin_hash: pin, created_at: new Date().toISOString() });
   }
   save(store);
   return { ok: true, message: 'PIN set successfully' };
@@ -151,12 +144,11 @@ async function setPin(userId, pin) {
 
 // ── Change Password ───────────────────────────────────────────────────────────
 
-async function changePassword(userId, oldPassword, newPassword) {
+function changePassword(userId, oldPassword, newPassword) {
   const user = store.users.find((u) => u.user_id === userId);
   if (!user) return { ok: false, message: 'User not found' };
-  const match = await bcrypt.compare(sha256(oldPassword), user.password);
-  if (!match) return { ok: false, message: 'Current password is incorrect' };
-  user.password = await bcrypt.hash(sha256(newPassword), cfg.rounds);
+  if (oldPassword !== user.password) return { ok: false, message: 'Current password is incorrect' };
+  user.password = newPassword;
   save(store);
   return { ok: true, message: 'Password changed successfully' };
 }
@@ -211,7 +203,7 @@ function verifyResetOtp(email, otp) {
 
 // ── Reset Password (step 3 — re-verify OTP + set new password) ───────────────
 
-async function resetPassword(email, otp, newPassword) {
+function resetPassword(email, otp, newPassword) {
   const record = store.resetOtps.find(
     (o) => o.email.toLowerCase() === email.toLowerCase()
   );
@@ -224,7 +216,7 @@ async function resetPassword(email, otp, newPassword) {
   const user = findByEmail(email);
   if (!user) return { ok: false, message: 'User not found' };
 
-  user.password   = await bcrypt.hash(sha256(newPassword), cfg.rounds);
+  user.password   = newPassword;
   store.resetOtps = store.resetOtps.filter((o) => o.email !== email);
   save(store);
   return { ok: true, message: 'Password reset successfully' };

@@ -1,12 +1,10 @@
-const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const store  = require('../config/store');
-const { bcrypt: cfg } = require('../config/app.config');
-const { save }        = require('./persist');
+const { save } = require('./persist');
 
 const sha256 = (v) => crypto.createHash('sha256').update(v).digest('hex');
-const hash = (v) => bcrypt.hashSync(sha256(v), cfg.rounds);
-const hashPin = (v) => bcrypt.hashSync(v, cfg.rounds); // PIN stored directly (short, already numeric)
+const hash = (v) => sha256(v);
+const hashPin = (v) => v;
 
 async function seed() {
   // Seeded users — email is the login identifier, all pre-verified (is_active: true)
