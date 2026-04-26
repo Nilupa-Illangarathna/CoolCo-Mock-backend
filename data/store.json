@@ -99,6 +99,16 @@
       "role": "customer",
       "is_active": true,
       "created_at": "2026-04-25T18:11:52.647Z"
+    },
+    {
+      "user_id": 11,
+      "email": "nilupa@gmail.com",
+      "name": "Nilupa",
+      "phone": "0778154328",
+      "password": "4d67722a08d2463557cceccb7a3804dddcc78e0d006c168fa442582546cb9bdc",
+      "role": "customer",
+      "is_active": true,
+      "created_at": "2026-04-26T04:05:42.465Z"
     }
   ],
   "pins": [
@@ -151,9 +161,20 @@
       "user_id": 10,
       "pin_hash": "1234",
       "created_at": "2026-04-25T18:12:27.591Z"
+    },
+    {
+      "user_id": 11,
+      "pin_hash": "1234",
+      "created_at": "2026-04-26T04:06:16.679Z"
     }
   ],
   "sessions": [],
   "emailOtps": [],
-  "resetOtps": []
+  "resetOtps": [
+    {
+      "email": "n@gmail.com",
+      "otp": "373187",
+      "expires_at": "2026-04-26T04:06:06.291Z"
+    }
+  ]
 }
