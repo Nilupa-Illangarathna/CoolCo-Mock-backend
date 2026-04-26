@@ -101,7 +101,7 @@ function login(email, password) {
   const user = findByEmail(email);
   if (!user) return { ok: false, message: 'Invalid email or password' };
   if (!user.is_active)
-    return { ok: false, message: 'Account not verified. Please check your OTP.' };
+    return { ok: false, message: 'Account not verified. Please check your OTP.', email_verified: false };
 
   if (password !== user.password) return { ok: false, message: 'Invalid email or password' };
 

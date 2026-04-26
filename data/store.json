@@ -8,7 +8,7 @@
       "password": "875c1163262a3170c4dae7ce2a32d17e7ee1e9a35911b2f9dee6b6b8984acbd6",
       "role": "super_admin",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.889Z"
+      "created_at": "2026-04-26T07:22:16.662Z"
     },
     {
       "user_id": 2,
@@ -18,7 +18,7 @@
       "password": "bc78e58d55cde1346e68f8e5fe588dedf62fa457aa646a500a53347faff6ee24",
       "role": "manager",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 3,
@@ -28,7 +28,7 @@
       "password": "4ccd8250a707ac5bbb68926c0b3ffe55a96f4358f3ba7bb9883469ad24e07cda",
       "role": "warehouse",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 4,
@@ -38,7 +38,7 @@
       "password": "21158c9cd3c2c391d37fcacaa7a07fc5ff497bcf8f425a76e8fc7b755e15390e",
       "role": "sales",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 5,
@@ -48,7 +48,7 @@
       "password": "273f73658ef00c757eac0952b7942ba6b080ea1af2fc82a6999d3affe00f2ad1",
       "role": "cashier",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 6,
@@ -58,7 +58,7 @@
       "password": "57256bf15393e6e33588f2bf71d581a72b0159f15fa8315226df09a1a0cf54a2",
       "role": "technician",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 7,
@@ -68,7 +68,7 @@
       "password": "592d8d65ab13ae6f7f179ea1217c5948275d76403777d6278a6e13275cb097f1",
       "role": "dealer",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 8,
@@ -78,7 +78,7 @@
       "password": "dac88a350c7f14996afc2660115f674e9e1f103f6be4de5d77e38494259d2280",
       "role": "shop",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 9,
@@ -88,93 +88,72 @@
       "password": "2a761eefa960df7d9c69900e0ae99394bd7a7c26ad495f92a2ff4b4ce41903d8",
       "role": "customer",
       "is_active": true,
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 10,
       "email": "n@gmail.com",
-      "name": "Nn",
-      "phone": "0987654321",
+      "name": "Nilupa",
+      "phone": "0789654321",
       "password": "ece34b2f4423128be53cc89806c5b30bacc4df1961d8f09f1da3f1a970ac4cf7",
       "role": "customer",
       "is_active": true,
-      "created_at": "2026-04-25T18:11:52.647Z"
-    },
-    {
-      "user_id": 11,
-      "email": "nilupa@gmail.com",
-      "name": "Nilupa",
-      "phone": "0778154328",
-      "password": "4d67722a08d2463557cceccb7a3804dddcc78e0d006c168fa442582546cb9bdc",
-      "role": "customer",
-      "is_active": true,
-      "created_at": "2026-04-26T04:05:42.465Z"
+      "created_at": "2026-04-26T07:23:41.473Z"
     }
   ],
   "pins": [
     {
       "user_id": 1,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 2,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 3,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 4,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 5,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 6,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 7,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 8,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 9,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:10:18.890Z"
+      "created_at": "2026-04-26T07:22:16.663Z"
     },
     {
       "user_id": 10,
       "pin_hash": "1234",
-      "created_at": "2026-04-25T18:12:27.591Z"
-    },
-    {
-      "user_id": 11,
-      "pin_hash": "1234",
-      "created_at": "2026-04-26T04:06:16.679Z"
+      "created_at": "2026-04-26T07:29:36.255Z"
     }
   ],
   "sessions": [],
   "emailOtps": [],
-  "resetOtps": [
-    {
-      "email": "n@gmail.com",
-      "otp": "373187",
-      "expires_at": "2026-04-26T04:06:06.291Z"
-    }
-  ]
+  "resetOtps": []
 }
